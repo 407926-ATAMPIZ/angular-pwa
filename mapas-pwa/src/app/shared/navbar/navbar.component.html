@@ -1,0 +1,20 @@
+<header class="bg-blue-700 text-white px-4 py-3 flex justify-between items-center">
+  <h1 class="text-lg font-bold">Mapas PWA</h1>
+  <button (click)="menuAbierto = !menuAbierto" class="focus:outline-none hover:bg-blue-800 px-3 py-2 rounded">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6L20 6" stroke="skyblue" stroke-width="2"/>
+      <path d="M4 12L20 12" stroke="yellow" stroke-width="2"/>
+      <path d="M4 18L20 18" stroke="skyblue" stroke-width="2"/>
+    </svg>
+  </button>
+  @if (menuAbierto){
+    <div class="absolute top-16 right-4 text-black rounded shadow-lg w-40 z-50 transition-all duration-200 ease-in-out">
+      <a routerLink="/inicio"
+         class="block px-4 py-2 hover:bg-blue-100">Inicio</a>
+      <a routerLink="/historial"
+         class="block px-4 py-2 hover:bg-blue-100">Historial</a>
+      <a routerLink="/mapa"
+         class="block px-4 py-2 hover:bg-blue-100">Mapa</a>
+    </div>
+  }
+</header>
