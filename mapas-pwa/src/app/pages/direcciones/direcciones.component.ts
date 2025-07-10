@@ -12,7 +12,7 @@ import {Position} from '../../models/position';
 })
 export class DireccionesComponent {
   destinos: Array<Position> = [
-    new Position(-31.529531, -68.587217),
+    new Position(-31.53120749932808, -68.58959998581916),
     new Position(-31.535311, -68.580093),
   ];
 }

@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, effect, Input, OnDestroy, signal} from '@angular/core';
+import {AfterViewInit, Component, Input, OnDestroy, signal} from '@angular/core';
 import * as L from 'leaflet';
 import {Position} from '../../../models/position';
 
@@ -38,7 +38,7 @@ export class MapaComponent implements AfterViewInit, OnDestroy {
         // Center the map on the current position
         this.map.setView([latitude, longitude], 15);
         // Add a marker for the current position
-        L.marker([latitude, longitude])
+        L.marker([latitude, longitude], {icon: this.iconoOrigen()})
           .addTo(this.map)
           .bindPopup('You are here!')
           .openPopup();
@@ -66,10 +66,19 @@ export class MapaComponent implements AfterViewInit, OnDestroy {
 
   private iconoDestino() {
     return L.icon({
+      iconUrl: 'https://cdn-icons-png.flaticon.com/512/15425/15425048.png',
+      iconSize: [32, 32],
+      iconAnchor: [4, 32],
+      popupAnchor: [12, -26],
+
+    })
+  }
+  private iconoOrigen() {
+    return L.icon({
       iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
       iconSize: [32, 32],
       iconAnchor: [16, 32],
-
+      popupAnchor: [0, -30],
     })
   }
 }
