@@ -9,6 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="30923ae0-0ba6-49d7-8fe6-5d8cdb690282" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapas-pwa/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mapas-pwa/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapas-pwa/src/app/models/position.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapas-pwa/src/app/pages/direcciones/direcciones.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/mapas-pwa/src/app/pages/direcciones/direcciones.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mapas-pwa/src/app/pages/direcciones/direcciones.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mapas-pwa/src/app/pages/direcciones/direcciones.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mapas-pwa/src/app/pages/direcciones/mapa/mapa.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mapas-pwa/src/app/pages/direcciones/mapa/mapa.component.ts" afterDir="false" />
     </list>
@@ -40,23 +43,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lautaro/Desktop/aver/angular-pwa/mapas-pwa/src/assets/leaflet",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.angularservice",
-    "ts.external.directory.path": "C:\\Users\\Lautaro\\Desktop\\aver\\angular-pwa\\mapas-pwa\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lautaro/Desktop/aver/angular-pwa&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.angularservice&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Lautaro\\Desktop\\aver\\angular-pwa\\mapas-pwa\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lautaro\Desktop\aver\angular-pwa\mapas-pwa\src\assets\leaflet" />
@@ -76,7 +80,13 @@
       <updated>1749768552969</updated>
       <workItem from="1752020434780" duration="5292000" />
       <workItem from="1752076206248" duration="9396000" />
-      <workItem from="1752175954932" duration="2286000" />
+      <workItem from="1752175954932" duration="5306000" />
+      <workItem from="1752273948656" duration="4031000" />
+      <workItem from="1752504821291" duration="3935000" />
+      <workItem from="1752520904878" duration="257000" />
+      <workItem from="1752536647782" duration="1542000" />
+      <workItem from="1752606009644" duration="6191000" />
+      <workItem from="1752710345183" duration="1580000" />
     </task>
     <servers />
   </component>

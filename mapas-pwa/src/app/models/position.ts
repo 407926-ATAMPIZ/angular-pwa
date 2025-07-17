@@ -1,26 +1,11 @@
-export class Position {
-  private _lat: number;
-  private _lng: number;
+import { GeoPoint } from './geo-point';
 
-  constructor(lat: number, lng: number) {
-    this._lat = lat;
-    this._lng = lng;
-  }
-
-  get lng(): number {
-    return this._lng;
-  }
-
-  set lng(value: number) {
-    this._lng = value;
-  }
-
-  get lat(): number {
-    return this._lat;
-  }
-
-  set lat(value: number) {
-    this._lat = value;
-  }
-
+/**
+ * Modelo interno de la app
+ * No incluye todo lo que devuelve Nominatim, solo lo necesario + las coordenadas y el displayName.
+ */
+export interface Position extends GeoPoint {
+  country?: string;
+  state?: string;
+  city?: string;
 }

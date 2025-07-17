@@ -1,3 +1,23 @@
 <div class="h-[80vh] w-full">
-  <app-mapa [destinos]="destinos"></app-mapa>
+  <!--    TODO: terminar de implementar esto, sacar el input del usuario del evento y pasarlo como parámetro al método onsearchimput-->
+  <input
+    type="text"
+    [(ngModel)]="query"
+    (input)="onSearchInput()"
+    placeholder="Buscar dirección (ej: Pueyrredón 1234)"
+    class="w-full p-2 border border-gray-300 rounded shadow-sm"
+  />
+
+  <!-- Lista de sugerencias -->
+  @if (results().length > 0) {
+    <ul class="absolute z-50 bg-white border rounded shadow w-full max-h-60 overflow-auto">
+      @for (result of results(); track result.place_id) {
+        <li (click)="seleccionar(result)" class="px-4 py-2 hover:bg-blue-100 cursor-pointer">
+          {{ result.display_name }}
+        </li>
+      }
+    </ul>
+  }
+
+  <app-mapa [destinos]="destinos()"></app-mapa>
 </div>

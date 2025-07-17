@@ -1,5 +1,6 @@
-import {AfterViewInit, Component, Input, OnDestroy, signal} from '@angular/core';
+import {AfterViewInit, Component, effect, Input, OnDestroy, signal} from '@angular/core';
 import * as L from 'leaflet';
+import {NominatimPlace} from '../../../models/nominatim-place';
 import {Position} from '../../../models/position';
 
 @Component({
@@ -12,7 +13,7 @@ export class MapaComponent implements AfterViewInit, OnDestroy {
   // Leaflet map instance
   private map!: L.Map;
   // Signal to hold the current position
-  currentPosition = signal<Position | null>(null);
+  @Input() currentPosition = signal<Position | null>(null);
   // Input to receive an array of destination positions
   @Input() destinos: Array<Position> = [];
 
@@ -30,13 +31,10 @@ export class MapaComponent implements AfterViewInit, OnDestroy {
         const latitude = p.coords.latitude
         const longitude = p.coords.longitude
         // Update the current position signal
-        this.currentPosition.set(new Position(
-          latitude,
-          longitude
-        ))
-        console.log("Current position:", this.currentPosition()?.lat, this.currentPosition()?.lng);
+        this.currentPosition.set({lat: latitude, lon: longitude, display_name: "You're Here!"})
+        console.log("Current position:", this.currentPosition()?.lat, this.currentPosition()?.lon);
         // Center the map on the current position
-        this.map.setView([latitude, longitude], 15);
+        this.map.setView([latitude, longitude, 0], 15);
         // Add a marker for the current position
         L.marker([latitude, longitude], {icon: this.iconoOrigen()})
           .addTo(this.map)
@@ -48,9 +46,9 @@ export class MapaComponent implements AfterViewInit, OnDestroy {
     // effect(() => {
     // Adds a marker in the map for each destination
     this.destinos.forEach(pos => {
-      L.marker([pos.lat, pos.lng], {icon: this.iconoDestino()})
+      L.marker([pos.lat, pos.lon], {icon: this.iconoDestino()})
         .addTo(this.map)
-        .bindPopup(`Destino`);
+        .bindPopup(pos.display_name);
     });
     // });
   }
@@ -73,6 +71,7 @@ export class MapaComponent implements AfterViewInit, OnDestroy {
 
     })
   }
+
   private iconoOrigen() {
     return L.icon({
       iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
